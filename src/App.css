@@ -1,128 +1,121 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;700;800;900&family=Open+Sans:wght@300;400;600;700&display=swap");
+
 :root {
-  --dark-one: #333;
-  --dark-two: #7a7a7a;
-  --dark-three: #0f0c16;
-  --main-color: #581a70b9;
-  --color-white: #fff;
-  --light-two: #f9fafb;
-  --light-three: #f6f7fb;
-  --color-success: #7db91d;
-  --color-danger: #FF0060;
-  --color-warning: #F7D060;
-  --color-primary: #6c9BCF;
-  --color-dark: #363949;
-  --color-dark-variant: #677483;
-  --color-dark-variant-2:#282c34;
-  --color-info-dark: #7d8da1;
-  --color-background: #f6f6f9;
-  --color-light: rgba(132, 139, 200, 0.18);
+ --primary-color: #FFC107;
+ --secondary-color: #4CAF50;
+ --accent-color: #F44336;
+ --dark-color: #212121;
+ --light-color: #F0F2F5;
+ --text-color: #333;
 
-  --card-border-radius: 2rem;
-  --border-radius-1: 0.4rem;
-  --border-radius-2: 1.2rem;
+ --card-border-radius: 2rem;
+ --border-radius-1: 0.4rem;
+ --border-radius-2: 1.2rem;
 
-  --card-padding: 1.8rem;
-  --padding-1: 1.2rem;
+ --card-padding: 1.8rem;
+ --padding-1: 1.2rem;
 
-  --box-shadow: 0 2rem 3rem var(--color-light);
-
-
+ --box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.1);
 }
+
+body {
+ font-family: 'Open Sans', sans-serif;
+ font-size: 0.88rem;
+ user-select: none;
+ overflow-x: hidden;
+ color: var(--text-color);
+ background: linear-gradient(to bottom right, var(--primary-color), var(--secondary-color));
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+
 .App {
-  width: 100vw;
-    height: 100vh;
-    font-family: 'Poppins', sans-serif;
-    font-size: 0.88rem;
-    user-select: none;
-    overflow-x: hidden;
-    color: var(--color-dark);
-    background-color: var(--color-background);
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+ height: 100vh;
 }
-.app h1{
-  font-weight: 800;
-  font-size: 1.8rem;
 
-
+.App h1 {
+ font-family: 'Raleway', sans-serif;
+ font-weight: 800;
+ font-size: 1.8rem;
 }
 
 .App-header {
-  background-color: var(--color-dark-variant-2);
-  min-height: 8vh;
-  align-items: center;
-
-  font-size: 1.3rem;
-  color: #fff; /* Text color for the header */
-  padding: 20px;
-  position: relative;
+ background-color: var(--dark-color);
+ min-height: 8vh;
+ align-items: center;
+ font-size: 1.3rem;
+ color: #fff;
+ padding: 20px;
+ text-align: center;
 }
 
-.App-header h1{
-  position: absolute;
-  top: 30%; 
-  left: 50%; 
-  transform: translate(-50%, -50%); 
-} 
-
-
 .transaction-form {
-  background-color: var(--color-dark-variant-2);
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+ background-color: #FAFAFA;
+ padding: 20px;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
 }
 
 .transaction-form input {
-  padding: 10px;
-  margin: 5px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+ padding: 10px;
+ margin: 5px;
+ border: 1px solid #ddd;
+ border-radius: 5px;
 }
 
-.transaction-form button{
-  background-color: var(--color-success);
-  cursor: pointer;
-}
-.transaction-form button :hover {
-  color: var(--color-warning);
-
-}
-.App .transaction-table{
-  box-shadow: 0 2rem 3rem rgba(132, 139, 200, 0.18);
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
-  border-collapse: collapse;
-  width: 100%;
-  margin: 20px 0;
+.transaction-form button {
+ background-color: var(--accent-color);
+ cursor: pointer;
 }
 
-.App .transaction-table th, td{
-  border: 1px solid var(--color-info-dark);
-  padding: 8px;
-  text-align: left;
+.transaction-form button:hover {
+ background-color: #D32F2F;
 }
 
-.transaction-table button{
-  cursor: pointer;
-  background-color: var(--color-info-dark);
-
+.App .transaction-table {
+ box-shadow: var(--box-shadow);
+ background-color: #fff;
+ border: 1px solid #ddd;
+ border-collapse: collapse;
+ width: 100%;
+ margin: 20px 0;
 }
 
-.transaction-table button:hover{
-  background-color: var(--color-danger) ;
+.App .transaction-table th,
+.App .transaction-table td {
+ border: 1px solid #ddd;
+ padding: 8px;
+ text-align: left;
+}
 
+.transaction-table button {
+ cursor: pointer;
+ background-color: var(--secondary-color);
+}
+
+.transaction-table button:hover {
+ background-color: #2E7D32;
 }
 
 .transaction-table th {
-  background-color: #333;
-  color: #fff;
+ background-color: var(--secondary-color);
+ color: #fff;
 }
 
 .transaction-table tr:nth-child(even) {
-  background-color: #f2f2f3;
+ background-color: #F2F2F3;
 }
 
 .search-bar {
-  padding: 10px;
+ padding: 10px;
+ background-color: #fff;
+ border: 1px solid #ddd;
 }
+
+

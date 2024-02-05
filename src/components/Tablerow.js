@@ -9,7 +9,7 @@ function TableRowTransaction ({ transaction, onDelete }) {
         <td>{transaction.category}</td>
         <td>{transaction.amount}</td>
         <td>
-          <button onClick={() => onDelete(transaction.id)}>Delete</button>
+          {/*<button onClick={() => onDelete(transaction.id)}>Delete</button>*/}
         </td>
       </tr>
     </>
