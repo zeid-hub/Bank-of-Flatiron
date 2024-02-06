@@ -11,7 +11,7 @@ function TableTransaction({transactions, onDelete}) {
           <th>Description</th>
           <th>Category</th>
           <th>Amount</th>
-          {/*<th>Actions</th>*/}
+          <th>Actions</th>
         </tr>
       </thead>
       <tbody>

@@ -43,8 +43,8 @@ function App() {
      <h1>Flatiron Bank </h1>
       </header> */}
       <Header />
-      <SearchBar onSearch={setSearchTerm}/>
       <TableTransaction transactions={filteredTransactions} onDelete={deleteTransaction}/> 
+      <SearchBar onSearch={setSearchTerm}/>
       <TransactionForm onSubmit={addTransaction}/>
     </div>
   );
